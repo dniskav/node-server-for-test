@@ -1,6 +1,6 @@
 {
   "name": "server-for-test",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a node server to support backend in my testing apps",
   "main": "index.js",
   "scripts": {
