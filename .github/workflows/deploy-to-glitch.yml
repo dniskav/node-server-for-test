@@ -15,7 +15,7 @@ jobs:
       uses: actions/checkout@v3  # Usa la versión más reciente de la acción de checkout
 
     - name: Set up SSH
-      uses: webfactory/ssh-agent@v0.5.4
+      uses: webfactory/ssh-agent@v0.8.0  # Usa la versión más reciente de la acción ssh-agent
       with:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
