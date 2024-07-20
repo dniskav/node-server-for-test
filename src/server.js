@@ -1,11 +1,13 @@
 const express = require('express');
 const WebSocket = require('ws');
 const http = require('http');
+const cors = require('cors');
 
 const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.static('public'));
+app.use(cors);
 
 const server = http.createServer(app);
 
