@@ -1,0 +1,20 @@
+name: Deploy to Glitch
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Deploy to Glitch
+      run: |
+        curl -X POST https://api.glitch.com/project/githubImport -d '{"repo":"dniskav/node-server-for-test"}' \
+        -H 'Authorization: Bearer ${{ secrets.GLITCH_TOKEN }}' \
+        -H 'Content-Type: application/json'
