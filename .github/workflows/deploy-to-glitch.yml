@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master
-  workflow_dispatch:
+  workflow_dispatch:  # Permite ejecutar el workflow manualmente
 
 jobs:
   deploy:
@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3  # Usa la versión más reciente de la acción de checkout
 
     - name: Deploy to Glitch
       run: |
